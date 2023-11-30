@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  width: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.container {
+  display: flex;
+  height: 90%;
+}
+
+/* ------------------LEFT-PAGE------------------ */
+
+.left-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #561483, #7c258e);
+  width: 60vw;
+  height: 105vh;
+}
+
+.left-page p {
+  text-align: center;
+  margin: 50px;
+  color: white;
+}
+
+.left-page img {
+}
+
+.floating-image {
+  width: 900px;
+  height: 600px;
+  position: relative;
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* -----------------RIGHT-PAGE------------------- */
+.right-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #ffffff, #adf4ff);
+  width: 40vw;
+  height: 105vh;
+  z-index: 0;
+}
+
+.title {
+  z-index: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 60px;
+  background: linear-gradient(144deg, #af40ff, #5b42f3, #00ddeb);
+  padding: 100px;
+  -webkit-background-clip: text;
+  color: transparent; /* Torna o texto transparente para que o gradiente de fundo seja visível */
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.user h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 55px;
+}
+
+.between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 30px 120px;
+  color: #72218b;
+}
+
+/* inputs */
+
+input {
+  font-size: medium;
+}
+
+#email
+{
+    text-align: left;
+    padding: 20px 150px;
+    width: 50%;
+    box-sizing: 1px solid black;
+    border: none;
+    border-radius: 40px;
+    background-color: #2e3234;
+    box-shadow: -6px 6px 7px 0px #72218b83;
+}
+
+
+.user input {
+  text-align: left;
+  padding: 20px 150px;
+  width: 50%;
+  box-sizing: 1px solid black;
+  border: none;
+  border-radius: 40px;
+  background-color: #2e3234;
+  box-shadow: -6px 6px 7px 0px #72218b83;
+}
+
+.user input:focus{
+  outline: none;
+  border: 1px solid #ccc; 
+}
+
+input:not(:placeholder-shown) {
+  background-color: #e8f0fe;
+}
+
+.user label i {
+  position: relative;
+  left: 45px;
+  top: 45px;
+  color: white;
+  font-size: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.footer button {
+  padding: 15px 100px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(to left, #76228c, #3c087c);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s linear;
+}
+
+.footer button:hover {
+  background: linear-gradient(to left, #3c087c, #76228c);
+  filter: grayscale();
+}
+
+.footer a {
+  margin-top: 90px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  transition: ease-in 1s;
+}
+
+.footer a:hover {
+  border-bottom: 1px solid #0000ee;
+  padding: 0px 30px;
+}
+
+/* --------------------------- */
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.forgot {
+  text-decoration: none;
+  color: #72218b;
+  font-weight: 700;
+  transition: 0.3s linear;
+}
+
+.forgot:hover {
+  filter: grayscale();
+}
+
+.remember input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.remember {
+  border: 1px solid black;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.6em;
+  width: 1.6em;
+  border-radius: 50%;
+  background: #ffeded38;
+  transition: all 0.2s ease;
+}
+
+.checkmark {
+  opacity: 0.4;
+}
+
+.container input:checked ~ .checkmark {
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 0.61em;
+  top: 0.43em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}

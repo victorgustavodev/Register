@@ -8,7 +8,6 @@ async function connectToMongoDB() {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-
         console.log(`${chalk.redBright("[DATABASE]")} ${chalk.whiteBright("Conexão com a mongoose estabelecida!")}`);
     } catch (error) {
         console.error('Erro ao conectar ao MongoDB:', error);
