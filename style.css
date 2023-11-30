@@ -10,6 +10,8 @@ body {
   display: flex;
   width: 100vh;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .container {
   display: flex;
@@ -25,7 +27,7 @@ body {
   flex-direction: column;
   background: linear-gradient(to right, #561483, #7c258e);
   width: 60vw;
-  height: 100vh;
+  height: 105vh;
 }
 
 .left-page p {
@@ -61,7 +63,7 @@ body {
   flex-direction: column;
   background: linear-gradient(to right, #ffffff, #adf4ff);
   width: 40vw;
-  height: 100vh;
+  height: 105vh;
   z-index: 0;
 }
 
@@ -101,10 +103,17 @@ body {
   color: #72218b;
 }
 
+/* inputs */
+
+input {
+  font-size: medium;
+}
+
 #email
 {
     text-align: left;
     padding: 20px 150px;
+    width: 50%;
     box-sizing: 1px solid black;
     border: none;
     border-radius: 40px;
@@ -116,6 +125,7 @@ body {
 .user input {
   text-align: left;
   padding: 20px 150px;
+  width: 50%;
   box-sizing: 1px solid black;
   border: none;
   border-radius: 40px;
@@ -123,10 +133,19 @@ body {
   box-shadow: -6px 6px 7px 0px #72218b83;
 }
 
+.user input:focus{
+  outline: none;
+  border: 1px solid #ccc; 
+}
+
+input:not(:placeholder-shown) {
+  background-color: #e8f0fe;
+}
+
 .user label i {
   position: relative;
   left: 45px;
-  top: 5px;
+  top: 45px;
   color: white;
   font-size: 30px;
 }
@@ -158,7 +177,7 @@ body {
 }
 
 .footer a {
-  margin-top: 200px;
+  margin-top: 90px;
   text-decoration: none;
   font-size: 18px;
   font-weight: 400;
@@ -249,3 +268,4 @@ body {
   border-width: 0 0.15em 0.15em 0;
   transform: rotate(45deg);
 }
+
